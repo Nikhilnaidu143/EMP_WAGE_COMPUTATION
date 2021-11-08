@@ -1,6 +1,7 @@
 
 /* UC-2:- Calculate daily employee wage */
-
+public class EmpWageProblem{
+	public static void main(String[] args){
                 /*Constant Variables.*/
                 int isPresent = 1;
                 int empRatePHr = 20;
