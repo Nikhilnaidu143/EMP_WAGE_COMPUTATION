@@ -1,8 +1,5 @@
+
 /* UC-2:- Calculate daily employee wage */
-public class EmpWageProblem {
-        public static void main(String[] args) {
-                /* Displaying welcome message in masterbranch. */
-                System.out.println("WELCOME TO EMPLOYEE WAGE COMPUTATION PROGRAM.\n");
 
                 /*Constant Variables.*/
                 int isPresent = 1;
@@ -25,4 +22,5 @@ public class EmpWageProblem {
                 System.out.println("EMPLOYEE DAILY WAGE :- " + empWage + "\n");
         }
 }
+
 
