@@ -1,3 +1,4 @@
+
 /*UC-3:- Added parttime employee and calculated wage */
 public class EmpWageProblem {
         public static void main(String[] args) {
@@ -7,13 +8,7 @@ public class EmpWageProblem {
                 /*Constant Variables.*/
                 int isFullTime = 2;
                 int isPartTime = 1;
-                int empRatePHr = 20;
 
-                /*Temporary Variables */
-                int empHrs = 0;
-                int empWage = 0;
-
-                /* Finding employee is present or absent */
                 double empCheck = Math.floor(Math.random()*3);
                 if(empCheck == isFullTime) {
                         empHrs = 8;
@@ -26,10 +21,12 @@ public class EmpWageProblem {
                 else{
                         empHrs = 0;
                         System.out.println("EMPLOYEE IS ABSENT... ");
+
                 }
                 /* Calculate employee daily wage */
                 empWage = empHrs * empRatePHr;
                 System.out.println("EMPLOYEE DAILY WAGE :- " + empWage + "\n");
         }
 }
+
 
