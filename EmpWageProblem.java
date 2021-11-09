@@ -1,5 +1,5 @@
 /* UC-6 :-- Calculate Wages till a condition of total working hours or days is reached for a month. */
-public class empWageProblem {
+public class EmpWageProblem {
    public static void main(String[] args) {
       /* Displaying welcome message in masterbranch. */
       System.out.println("WELCOME TO EMPLOYEE WAGE COMPUTATION PROGRAM.\n");
