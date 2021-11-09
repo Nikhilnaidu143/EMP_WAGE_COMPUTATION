@@ -1,3 +1,4 @@
+
 /* UC-1 check employee is present or absent.*/
 public class EmpWageProblem {
         public static void main(String[] args) {
@@ -16,3 +17,5 @@ public class EmpWageProblem {
                 }
         }
 }
+
+
