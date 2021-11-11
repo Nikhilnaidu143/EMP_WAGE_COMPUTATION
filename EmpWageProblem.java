@@ -28,7 +28,7 @@ public class EmpWageProblem {
             default:
                empHrs = 0;
             }
-      /* Calculate employee total wage */
+      	/* Calculate employee total wage */
          empWage = empHrs * empRatePHr;
          totalEmpWage = totalEmpWage + empWage;
          System.out.println("EMPLOYEE day-" + day + " income :- " + empWage);
