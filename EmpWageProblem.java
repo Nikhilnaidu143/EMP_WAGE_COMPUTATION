@@ -7,7 +7,7 @@ public class EmpWageProblem {
     /*Constant Variables.*/
     int isFullTime = 2;
     int isPartTime = 1;
-  	int empRatePHr = 20;
+    int empRatePHr = 20;
 
 		/*	Temporary variables */
 		int empHrs = 0;
