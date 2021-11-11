@@ -1,6 +1,6 @@
-/*  UC-6 :-Calculated Wages till a condition of total working hours or days is reached for a month. */
+// UC-7:-Refactor the Code to write a Class Method to Compute employee wage.
 public class EmpWageProblem {
-   public static void main(String[] args) {
+   public void computation_of_emp_wage() {
       /* Displaying welcome message in masterbranch. */
       System.out.println("WELCOME TO EMPLOYEE WAGE COMPUTATION PROGRAM.\n");
 
