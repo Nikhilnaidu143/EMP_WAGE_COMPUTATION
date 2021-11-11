@@ -1,4 +1,4 @@
-/* UC-4:- Solve using switch case statementt. */
+/* UC-4:- Solveed using switch case statementt. */
 public class EmpWageProblem {
    public static void main(String[] args) {
       /* Displaying welcome message in masterbranch. */
