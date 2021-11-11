@@ -1,4 +1,4 @@
-/*UC-5:- CALCULATE WAGES FOR A MONTH */
+/*  UC-6 :-Calculated Wages till a condition of total working hours or days is reached for a month. */
 public class EmpWageProblem {
    public static void main(String[] args) {
       /* Displaying welcome message in masterbranch. */
@@ -9,14 +9,18 @@ public class EmpWageProblem {
       final int isPartTime = 1;
       final int empRatePHr = 20;
       final int totalWorkDays = 20;
+      final int maxHrsPMonth = 100;
 
       /*Temporary Variables */
       int empHrs = 0;
       int empWage = 0;
       int totalEmpWage = 0;
+      int totalEmpHrs = 0;
+      int numOfDays = 0;
 
       /* Finding employee is present or absent */
-      for(int day=1; day<=totalWorkDays; day++) {
+      while (totalEmpHrs <= maxHrsPMonth && numOfDays < totalWorkDays ) {
+         numOfDays++;
          int empCheck = (int) Math.floor(Math.random()*3);
          switch (empCheck) {
             case isFullTime:
@@ -28,10 +32,11 @@ public class EmpWageProblem {
             default:
                empHrs = 0;
             }
-      	/* Calculate employee total wage */
-         empWage = empHrs * empRatePHr;
+      /* Calculate employee total wage */
+         totalEmpHrs += empHrs;
+         empWage = totalEmpHrs * empRatePHr;
          totalEmpWage = totalEmpWage + empWage;
-         System.out.println("EMPLOYEE day-" + day + " income :- " + empWage);
+         System.out.println("EMPLOYEE day-" + numOfDays + " income :- " + empWage);
       }
       System.out.println("\nEMPLOYEE TOTAL WAGE :- " + totalEmpWage + "\n");
    }
