@@ -1,35 +1,46 @@
-/*UC-3:- Added parttime employee and calculated wage */
+/*  UC-6 :-- Calculated Wages till a condition of total working hours or days is reached for a month. */
 public class EmpWageProblem {
-  public static void main(String[] args) {
-	 	/* Displaying welcome message in masterbranch. */
-	  System.out.println("WELCOME TO EMPLOYEE WAGE COMPUTATION PROGRAM.\n");
+   public static void main(String[] args) {
+      /* Displaying welcome message in masterbranch. */
+      System.out.println("WELCOME TO EMPLOYEE WAGE COMPUTATION PROGRAM.\n");
 
-    /*Constant Variables.*/
-    int isFullTime = 2;
-    int isPartTime = 1;
-  	int empRatePHr = 20;
+      /*Constant Variables.*/
+      final int isFullTime = 2;
+      final int isPartTime = 1;
+      final int empRatePHr = 20;
+      final int totalWorkDays = 20;
+      final int maxHrsPMonth = 100;
 
-		/*	Temporary variables */
-		int empHrs = 0;
-		int empWage = 0;
+      /*Temporary Variables */
+      int empHrs = 0;
+      int empWage = 0;
+      int totalEmpWage = 0;
+      int totalEmpHrs = 0;
+      int numOfDays = 0;
 
-
-    double empCheck = Math.floor(Math.random()*3);
-    if(empCheck == isFullTime) {
-      empHrs = 8;
-      System.out.println("FULLTIME EMPLOYEE... ");
-   	}
-    else if (empCheck == isPartTime) {
-      empHrs = 4;
-      System.out.println("PARTTIME EMPLOYEE... ");
-  	}
-    else{
-      empHrs = 0;
-      System.out.println("EMPLOYEE IS ABSENT... ");
-    }
-    /* Calculate employee daily wage */
-    empWage = empHrs * empRatePHr;
-    System.out.println("EMPLOYEE DAILY WAGE :- " + empWage + "\n");
-	}
+      /* Finding employee is present or absent */
+      while (totalEmpHrs <= maxHrsPMonth && numOfDays < totalWorkDays ) {
+         numOfDays++;
+         int empCheck = (int) Math.floor(Math.random()*3);
+         switch (empCheck) {
+            case isFullTime:
+               empHrs = 8;
+               break;
+            case isPartTime:
+               empHrs = 4;
+               break;
+            default:
+               empHrs = 0;
+            }
+      /* Calculate employee total wage */
+         totalEmpHrs += empHrs;
+         empWage = totalEmpHrs * empRatePHr;
+         totalEmpWage = totalEmpWage + empWage;
+         System.out.println("EMPLOYEE day-" + numOfDays + " income :- " + empWage);
+      }
+      System.out.println("\nEMPLOYEE TOTAL WAGE :- " + totalEmpWage + "\n");
+   }
 }
+
+
 
