@@ -6,7 +6,7 @@ public class EmpWageProblem {
                 System.out.println("WELCOME TO EMPLOYEE WAGE COMPUTATION PROGRAM.\n");
 
                 int isPresent = 1;
-                                         /*employee check */
+                 /*employee check */
                 double empCheck = Math.floor(Math.random()*10%2);
 
                 if(empCheck == isPresent) {
