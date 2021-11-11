@@ -1,13 +1,10 @@
-// UC-7:-Refactor the Code to write a Class Method to Compute employee wage.
+// UC-8:- calculate wages for multiple companies.
 public class EmpWageProblem {
    public void computation_of_emp_wage(String company_name , int totalWorkDays , int maxHrsPMonth , int empRatePHr) {
 
       /*Constant Variables.*/
       final int isFullTime = 2;
       final int isPartTime = 1;
-      //final int empRatePHr = 20;
-      //final int totalWorkDays = 20;
-      //final int maxHrsPMonth = 100;
 
       /*Temporary Variables */
       int empHrs = 0;
@@ -34,7 +31,6 @@ public class EmpWageProblem {
          totalEmpHrs += empHrs;
          empWage = totalEmpHrs * empRatePHr;
          totalEmpWage = totalEmpWage + empWage;
-         //System.out.println("EMPLOYEE day-" + numOfDays + " income :- " + empWage);
       }
       System.out.println(company_name + " employee total wage :- " + totalEmpWage + "\n");
    }
