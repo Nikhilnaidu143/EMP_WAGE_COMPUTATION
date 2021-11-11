@@ -1,4 +1,4 @@
-/*  UC-6 :-- Calculated Wages till a condition of total working hours or days is reached for a month. */
+/*  UC-6 :-Calculated Wages till a condition of total working hours or days is reached for a month. */
 public class EmpWageProblem {
    public static void main(String[] args) {
       /* Displaying welcome message in masterbranch. */
@@ -41,6 +41,5 @@ public class EmpWageProblem {
       System.out.println("\nEMPLOYEE TOTAL WAGE :- " + totalEmpWage + "\n");
    }
 }
-
 
 
