@@ -1,25 +1,30 @@
-// UC-9 :- Ability to save total wage for each company.
-
+// UC-10:- ability to manage employee wage for multiple companies.
 public class EmpWageProblem {
 	/*Constant Variables.*/
     final int isFullTime = 2;
     final int isPartTime = 1;
     
-    final String company_name;
-    final int totalWorkDays;
-    final int maxHrsPMonth; 
-    final int empRatePHr;
+    int num_Of_Companies = 0;
+    // initializing array
+    CompanyEmpWage[] companyEmpWageArray = new CompanyEmpWage[5];
     
-    int totalEmpWage;
     
-   public EmpWageProblem(String company_name, int totalWorkDays, int maxHrsPMonth, int empRatePHr) {
-		this.company_name = company_name;
-		this.totalWorkDays = totalWorkDays;
-		this.maxHrsPMonth = maxHrsPMonth;
-		this.empRatePHr = empRatePHr;
-	}
+    // adding company details into an array
+   public void addCompanyEmpWage(String company_name, int totalWorkDays, int maxHrsPMonth, int empRatePHr) {
+	   companyEmpWageArray[num_Of_Companies] = new CompanyEmpWage(company_name, totalWorkDays, maxHrsPMonth, empRatePHr);
+	   num_Of_Companies++;
+   } 
+    
+   //setting total employee wage in an array for multiple companies.
+   public void computation_of_emp_wage() {
+	   for(int i = 0; i < num_Of_Companies; i++) {
+		   companyEmpWageArray[i].setTotalEmpWage(this.computation_of_emp_wage(companyEmpWageArray[i]));
+		   System.out.println(companyEmpWageArray[i]);
+	   }
+   } 
 
-   public int computation_of_emp_wage() {
+   // calculation of total employee wage
+   public int computation_of_emp_wage(CompanyEmpWage companyEmpWage) {
 
       /*Temporary Variables */
       int empHrs = 0;
@@ -29,7 +34,7 @@ public class EmpWageProblem {
       int numOfDays = 0;
 
       /* Finding employee is present or absent */
-      while (totalEmpHrs <= maxHrsPMonth && numOfDays < totalWorkDays ) {
+      while (totalEmpHrs <= companyEmpWage.maxHrsPMonth && numOfDays < companyEmpWage.totalWorkDays ) {
          numOfDays++;
          int empCheck = (int) Math.floor(Math.random()*3);
          switch (empCheck) {
@@ -44,14 +49,10 @@ public class EmpWageProblem {
             }
       /* Calculate employee total wage */
          totalEmpHrs += empHrs;
-         empWage = totalEmpHrs * empRatePHr;
-         totalEmpWage = totalEmpWage + empWage;
+         empWage = totalEmpHrs * companyEmpWage.empRatePHr;
+         companyEmpWage.totalEmpWage = companyEmpWage.totalEmpWage + empWage;
       }
-      return totalEmpWage;
-   }
-   
-   @Override
-   public String toString() {
-	   return company_name + " employee total wage :- " + totalEmpWage;
+      return companyEmpWage.totalEmpWage; //returning total employee wage
    }
 }
+
