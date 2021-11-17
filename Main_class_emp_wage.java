@@ -1,8 +1,8 @@
-//main class for UC-7
+//main class for UC-12
 
 class Main_class_emp_wage {
 	public static void main(String[] args) {
-	   System.out.println("WELCOME TO EMPLOYEE WAGE COMPUTATION PROGRAM.\n");
+	   System.out.println("--------WELCOME TO EMPLOYEE WAGE COMPUTATION PROGRAM----------\n");
 	   
 	   interface_companyEmpWage object = new EmpWageProblem(); //creating object of sub class and reference of super class(interface).
 	   

@@ -1,4 +1,4 @@
-// creating interface for UC-11
+// creating interface 
 interface interface_companyEmpWage {
 	public abstract void addCompanyEmpWage(String company_name, int totalWorkDays, int maxHrsPMonth, int empRatePHr);
 

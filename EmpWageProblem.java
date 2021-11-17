@@ -1,4 +1,6 @@
-//UC-11 :- Aility to manage employee wage for multiple companies using INTERFACE approach.
+import java.util.ArrayList;
+
+// UC-12:- Refactor code to use ARRAYLIST instead of array
 public class EmpWageProblem implements interface_companyEmpWage{
 	/*Constant Variables.*/
     final int isFullTime = 2;
@@ -6,20 +8,22 @@ public class EmpWageProblem implements interface_companyEmpWage{
     
     int num_Of_Companies = 0;
     // initializing array
-    CompanyEmpWage[] companyEmpWageArray = new CompanyEmpWage[5];
+    static ArrayList<CompanyEmpWage> companyEmpWageArray = new ArrayList<CompanyEmpWage>();
     
     
     // adding company details into an array
    public void addCompanyEmpWage(String company_name, int totalWorkDays, int maxHrsPMonth, int empRatePHr) {
-	   companyEmpWageArray[num_Of_Companies] = new CompanyEmpWage(company_name, totalWorkDays, maxHrsPMonth, empRatePHr);
-	   num_Of_Companies++;
-   } 
+	  
+	   CompanyEmpWage CompanyEmpWage = new CompanyEmpWage(company_name, totalWorkDays, maxHrsPMonth, empRatePHr);
+	   companyEmpWageArray.add(CompanyEmpWage);
+   }  
     
    //setting total employee wage in an array for multiple companies.
    public void computation_of_emp_wage() {
-	   for(int i = 0; i < num_Of_Companies; i++) {
-		   companyEmpWageArray[i].setTotalEmpWage(computation_of_emp_wage(companyEmpWageArray[i]));
-		   System.out.println(companyEmpWageArray[i]);
+	   for(int i = 0; i < companyEmpWageArray.size(); i++) {
+		 CompanyEmpWage companyEmpWage = companyEmpWageArray.get(i);
+		 companyEmpWage.setTotalEmpWage(this.computation_of_emp_wage(companyEmpWage));
+		 System.out.println(companyEmpWage);
 	   }
    } 
 
