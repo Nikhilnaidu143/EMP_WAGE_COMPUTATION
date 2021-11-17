@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-// UC-12:- Refactor code to use ARRAYLIST instead of array
+// UC-13:- Store daily wage along with total wage.
 public class EmpWageProblem implements interface_companyEmpWage{
 	/*Constant Variables.*/
     final int isFullTime = 2;
@@ -54,6 +54,9 @@ public class EmpWageProblem implements interface_companyEmpWage{
          totalEmpHrs += empHrs;
          empWage = totalEmpHrs * companyEmpWage.empRatePHr;
          companyEmpWage.totalEmpWage = companyEmpWage.totalEmpWage + empWage;
+       
+         // UC-13 :- storing daily wage along with total wage.
+         System.out.println(companyEmpWage.company_name + " DAY-" + numOfDays + " wage:- " + empWage + " and employee hours :- " + empHrs);   
       }
       return companyEmpWage.totalEmpWage; //returning total employee wage
    }

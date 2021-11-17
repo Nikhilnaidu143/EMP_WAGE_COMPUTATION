@@ -1,5 +1,7 @@
 // creating interface 
 interface interface_companyEmpWage {
+	
+	// declaring methods
 	public abstract void addCompanyEmpWage(String company_name, int totalWorkDays, int maxHrsPMonth, int empRatePHr);
 
 	public abstract void computation_of_emp_wage();
@@ -7,6 +9,7 @@ interface interface_companyEmpWage {
 
 
 public class CompanyEmpWage {
+	// constant variables
 	final String company_name;
     final int totalWorkDays;
     final int maxHrsPMonth; 
@@ -35,6 +38,7 @@ public class CompanyEmpWage {
 	// overriding toString method to return in required string format.
 	@Override
 	public String toString() {
-		return company_name + " employee total wage :- " + totalEmpWage;
+		return "\n" + company_name + " employee total wage :- " + totalEmpWage + "\n" 
+				+ "-------------------------------------------------------------------" + "\n";
 	}
 }
