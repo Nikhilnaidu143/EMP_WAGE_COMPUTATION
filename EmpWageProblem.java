@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-// UC-13:- Store daily wage along with total wage.
+// UC-14 :- Ability to get total employee wage when queried by company. 
 public class EmpWageProblem implements interface_companyEmpWage{
 	/*Constant Variables.*/
     final int isFullTime = 2;
@@ -59,5 +59,21 @@ public class EmpWageProblem implements interface_companyEmpWage{
          System.out.println(companyEmpWage.company_name + " DAY-" + numOfDays + " wage:- " + empWage + " and employee hours :- " + empHrs);   
       }
       return companyEmpWage.totalEmpWage; //returning total employee wage
+   }
+   
+   
+   // UC-14 :- Ability to get total wage when queried by company.
+   public void getTotalWage(String company_name) {
+	   for(int i = 0; i < companyEmpWageArray.size(); i++) {
+		  String name = companyEmpWageArray.get(i).company_name;
+		   if(name.equals(company_name)) {
+			 int totalWage = companyEmpWageArray.get(i).totalEmpWage;
+			 System.out.println(company_name + " employee total wage :- " + totalWage);
+			 break;  
+		   }
+		   else {
+			   continue;
+		   }
+	   }
    }
 }

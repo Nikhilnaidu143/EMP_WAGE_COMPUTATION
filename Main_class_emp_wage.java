@@ -11,7 +11,10 @@ class Main_class_emp_wage {
 	   object.addCompanyEmpWage("Tech-Mahindra", 20, 90, 30);
 	   object.addCompanyEmpWage("Infosys", 20, 80, 20);
 	   
-	   object.computation_of_emp_wage(); //calling method for computation.
+	   object.computation_of_emp_wage(); //calling method for computation
 	   
+	   
+	   // uc-14:- get total wage when queried by company
+	   object.getTotalWage("BridgeLabz");
 	}
 }

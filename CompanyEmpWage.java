@@ -4,9 +4,11 @@ interface interface_companyEmpWage {
 	// declaring methods
 	public abstract void addCompanyEmpWage(String company_name, int totalWorkDays, int maxHrsPMonth, int empRatePHr);
 
-	public abstract void computation_of_emp_wage();
+	public void computation_of_emp_wage();
+	
+	public void getTotalWage(String company);  // UC-14 :- declared method to get total wage when company queried.
+	
 } 
-
 
 public class CompanyEmpWage {
 	// constant variables
