@@ -6,7 +6,6 @@ public class EmpWageProblem implements interface_companyEmpWage{
     final int isFullTime = 2;
     final int isPartTime = 1;
     
-    int num_Of_Companies = 0;
     // initializing array
     static ArrayList<CompanyEmpWage> companyEmpWageArray = new ArrayList<CompanyEmpWage>();
     
