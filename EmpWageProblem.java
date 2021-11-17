@@ -1,5 +1,5 @@
-// UC-10:- ability to manage employee wage for multiple companies.
-public class EmpWageProblem {
+//UC-11 :- Aility to manage employee wage for multiple companies using INTERFACE approach.
+public class EmpWageProblem implements interface_companyEmpWage{
 	/*Constant Variables.*/
     final int isFullTime = 2;
     final int isPartTime = 1;
@@ -18,7 +18,7 @@ public class EmpWageProblem {
    //setting total employee wage in an array for multiple companies.
    public void computation_of_emp_wage() {
 	   for(int i = 0; i < num_Of_Companies; i++) {
-		   companyEmpWageArray[i].setTotalEmpWage(this.computation_of_emp_wage(companyEmpWageArray[i]));
+		   companyEmpWageArray[i].setTotalEmpWage(computation_of_emp_wage(companyEmpWageArray[i]));
 		   System.out.println(companyEmpWageArray[i]);
 	   }
    } 
@@ -55,4 +55,3 @@ public class EmpWageProblem {
       return companyEmpWage.totalEmpWage; //returning total employee wage
    }
 }
-

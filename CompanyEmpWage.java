@@ -1,6 +1,13 @@
+// creating interface for UC-11
+interface interface_companyEmpWage {
+	public abstract void addCompanyEmpWage(String company_name, int totalWorkDays, int maxHrsPMonth, int empRatePHr);
+
+	public abstract void computation_of_emp_wage();
+} 
+
+
 public class CompanyEmpWage {
-	 // constant variables
-	 final String company_name;
+	final String company_name;
     final int totalWorkDays;
     final int maxHrsPMonth; 
     final int empRatePHr;
